@@ -1,17 +1,17 @@
-@import "tailwindcss";
-
-:root {
-  --beige: #f5f1eb;
-  --gold: #c6a75e;
-  --dark: #2e2e2e;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background-color: var(--beige);
+  /* Tu color base crema */
+  background-color: #f5f1eb;
   color: #2e2e2e;
-}
 
-.dark body {
-  background-color: #1e1e1e;
-  color: #eaeaea;
+  /* 📜 Efecto de papel antiguo (Viñeta fija) */
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(198, 167, 94, 0.2) 100%
+  );
+  background-attachment: fixed;
 }
