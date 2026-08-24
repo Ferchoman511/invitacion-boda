@@ -2,16 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* Tu color base crema */
-  background-color: #f5f1eb;
-  color: #2e2e2e;
-
-  /* 📜 Efecto de papel antiguo (Viñeta fija) */
-  background-image: radial-gradient(
-    circle at 50% 50%,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(198, 167, 94, 0.2) 100%
-  );
-  background-attachment: fixed;
+:root {
+  --font-serif: 'Playfair Display', serif; /* O la fuente que elijas */
+  --font-sans: 'Inter', sans-serif;
+  --color-primary: #3B4D3C; /* Verde oscuro para acentos */
+  --color-background: #F4F1ED; /* Crema claro para el fondo */
+  --color-text: #2E2E2E; /* Texto oscuro */
 }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+}
+
+/* Puedes añadir tu patrón aquí si lo deseas, pero hazlo muy sutil */
+/* 
+body {
+  background-image: url('/images/patron-bodas.png');
+  background-repeat: repeat;
+  background-size: 300px;
+  background-blend-mode: soft-light; 
+  opacity: 0.1;
+} 
+*/

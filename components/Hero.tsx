@@ -15,14 +15,14 @@ export default function Hero() {
         </span>
 
         {/* Divisor elegante */}
-        <div className="flex items-center justify-center gap-4 my-10">
+        <div className="flex items-center justify-center gap-4 my-8">
           <div className="w-16 h-[1px] bg-[#C6A75E]/40" />
           <span className="text-[#C6A75E] text-xl">✦</span>
           <div className="w-16 h-[1px] bg-[#C6A75E]/40" />
         </div>
 
         {/* Fecha */}
-        <p className="font-serif text-lg md:text-xl tracking-[0.3em] text-[#6B6B6B] uppercase">
+        <p className="font-serif text-lg md:text-xl tracking-[0.3em] text-[#6B6B6B] uppercase mt-6">
           13 . MARZO . 2027
         </p>
       </motion.div>

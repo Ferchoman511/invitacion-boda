@@ -1,47 +1,33 @@
-// components/Gallery.tsx
+"use client";
+
+import SectionCard from "./SectionCard";
+
 export default function Gallery() {
   const photos = [
-    { id: 1, rot: "-rotate-2" },
-    { id: 2, rot: "rotate-3" },
-    { id: 3, rot: "-rotate-1" },
-    { id: 4, rot: "rotate-2" },
+    { src: "/images/pareja-1.jpg", alt: "Fernando y Laura 1" },
+    { src: "/images/pareja-2.jpg", alt: "Fernando y Laura 2" },
+    { src: "/images/pareja-3.jpg", alt: "Fernando y Laura 3" },
   ];
 
   return (
-    <section className="py-24 text-center px-6">
-      <h2 className="font-script text-6xl md:text-7xl text-[#C6A75E] mb-2">
-        Nuestra Historia
-      </h2>
-      <p className="font-serif uppercase tracking-widest text-sm mb-16 text-[#6B6B6B]">
-        Momentos favoritos
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
-        {photos.map((photo) => (
+    <SectionCard titleTag="Nuestra Historia" title="Momentos Juntos">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto">
+        {photos.map((photo, index) => (
           <div
-            key={photo.id}
-            className={`
-              bg-white p-4 pb-16 
-              shadow-[10px_10px_25px_-5px_rgba(0,0,0,0.1)] 
-              hover:shadow-[15px_15px_35px_-5px_rgba(198,167,94,0.2)]
-              transition-all duration-500 hover:-translate-y-2
-              ${photo.rot}
-            `}
+            key={index}
+            className="relative h-64 sm:h-72 rounded-xl overflow-hidden shadow-md border border-[#DBC18C]/30 group"
           >
-            <div className="overflow-hidden aspect-square">
-              <img
-                src={`/gallery/${photo.id}.jpg`}
-                alt="Boda"
-                className="object-cover w-full h-full grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-              />
-            </div>
-            {/* Texto pequeñito como si estuviera escrito a mano abajo de la foto */}
-            <p className="font-script text-2xl text-[#6B6B6B] mt-6">
-              Recuerdo #{photo.id}
-            </p>
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className="w-full h-full object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+            />
           </div>
         ))}
       </div>
-    </section>
+      <p className="mt-6 text-xs sm:text-sm font-serif italic text-[#5C5C5C] max-w-md mx-auto">
+        "El amor no se mira con los ojos, sino con el alma."
+      </p>
+    </SectionCard>
   );
 }

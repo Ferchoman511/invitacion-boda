@@ -37,23 +37,25 @@ export default function RootLayout({ children }: RootLayoutProps) {
       lang="es"
       className={`${playfair.variable} ${inter.variable} ${pinyon.variable}`}
     >
-      <body className="text-[#2E2E2E] font-sans relative">
-        {/* 📜 CAPA 1: El degradado difuminado (Luz en el centro, dorado en las orillas) */}
+      <body className="text-[#2E2E2E] font-sans relative bg-[#F8F5F0]">
+        
+        {/* 🕊️ CAPA 1: Tu patrón de Girasoles y Palomas */}
         <div
           className="fixed inset-0 pointer-events-none z-[-2]"
           style={{
-            background:
-              "radial-gradient(circle at 50% 50%, #F5F1EB 20%, #DBC18C 100%)",
+            opacity: 0.12,
+            backgroundImage: `url("/images/patron-bodas.png")`, // 👈 Sin saltos de línea
+            backgroundRepeat: "repeat",
+            backgroundSize: "300px",
           }}
         />
 
-        {/* 🖌️ CAPA 2: La textura táctil (Fibras de papel) */}
+        {/* 🖌️ CAPA 2: La textura táctil de fibras de papel */}
         <div
           className="fixed inset-0 pointer-events-none z-[-1]"
           style={{
-            opacity: 0.25 /* 👈 Ajusta este número: 0.10 para más suave, 0.25 para más rústico */,
-            mixBlendMode:
-              "multiply" /* Hace que la textura se fusione como tinta en el papel */,
+            opacity: 0.15,
+            mixBlendMode: "multiply",
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
           }}
         />
