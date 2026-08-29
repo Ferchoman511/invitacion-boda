@@ -19,19 +19,19 @@ export default function CountdownSection() {
         {/* Marco decorativo interior */}
         <div className="absolute inset-3 sm:inset-4 rounded-xl border border-[#DBC18C]/30 pointer-events-none" />
 
-        {/* FLORES ESQUINA SUPERIOR DERECHA */}
+        {/* FLORES ESQUINA SUPERIOR DERECHA
         <img
           src="/images/flores-arriba.png"
           alt="Decoración floral"
           className="absolute -top-12 -right-10 sm:-top-16 sm:-right-14 w-36 sm:w-44 object-contain pointer-events-none drop-shadow-md z-20"
         />
 
-        {/* FLORES ESQUINA INFERIOR IZQUIERDA */}
+        {/* FLORES ESQUINA INFERIOR IZQUIERDA }
         <img
           src="/images/flores-abajo.png"
           alt="Decoración floral"
           className="absolute -bottom-14 -left-12 sm:-bottom-16 sm:-left-16 w-44 sm:w-52 object-contain pointer-events-none drop-shadow-lg z-20"
-        />
+        /> */}
 
         {/* ENCABEZADO */}
         <p className="text-[11px] sm:text-xs tracking-[0.35em] text-[#8C7A4B] uppercase font-sans font-medium mb-1">

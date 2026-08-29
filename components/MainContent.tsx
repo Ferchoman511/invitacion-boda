@@ -6,8 +6,7 @@ import Itinerary from "./Timeline";
 import GiftRegistry from "./GiftRegistry";
 import LocationSection from "./LocationSection";
 import Gallery from "./Gallery";
-import FilmGrain  from "./FilmGrain";
-import SmoothScrolling from "./SmoothScrolling";
+
 interface MainContentProps {
   isPlaying: boolean;
   toggleMusic: () => void;
