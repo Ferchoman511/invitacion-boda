@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <>
-      <audio ref={audioRef} src="/music.mp3" preload="auto" loop />
+      <audio ref={audioRef} src="/music.mp4" preload="auto" loop />
 
       {!opened && <EnvelopeIntro onOpen={handleOpen} />}
 

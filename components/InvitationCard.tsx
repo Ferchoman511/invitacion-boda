@@ -81,7 +81,7 @@ pero ahora, para toda la vida.
             <p>Cecilia Castañeda Huerta</p>
             <br />
             <p className="flex items-center justify-center ">
-              Ruben Méndez Segura <span className="text-[#C6A75E] text-2xl font-sans">✝</span>
+              Ruben Méndez Segura <span className="text-[#C6A75E] text-2xl font-sans"> ✝ </span>
             </p>
             <p>Guadalupe López Domínguez</p>
           </div>

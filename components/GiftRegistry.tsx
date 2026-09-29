@@ -93,7 +93,7 @@ export default function GiftRegistry() {
             </div>
             
             <a
-              href="https://www.amazon.com.mx/baby-reg" 
+              href="https://www.amazon.com.mx/wedding/guest-view/2ZMJIBB0KBOZC" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full bg-[#3B4D3C] text-white text-[11px] font-sans uppercase tracking-[0.2em] py-2.5 rounded-full hover:bg-[#2E3C2F] transition-colors shadow-md mt-4"

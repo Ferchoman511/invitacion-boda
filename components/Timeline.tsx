@@ -5,25 +5,29 @@ import { motion } from "framer-motion";
 export default function Timeline() {
   const eventos = [
     {
-      hora: "15:30 HRS",
-      titulo: "Llegada de Invitados",
+      hora: "15:00 HRS",
+      titulo: "Recepción",
       desc: "Por favor sé puntual, los novios estarán nerviosos y los suegros vigilando.",
       // Icono: Puerta / Bienvenida
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l3 3m0 0l-3 3m3-3H9" />
-        </svg>
+        <img 
+          src="/images/4it.png" 
+          alt="Llegada de novios" 
+          className="w-10 h-10 object-contain"
+        />
       ),
     },
     {
       hora: "16:00 HRS",
-      titulo: "Cóctel y Chismes",
+      titulo: "Cóctel",
       desc: "A tomar fotos, abrazar a los novios y calentar motores para la fiesta.",
       // Icono: Anillos / Iglesia
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-        </svg>
+       <img 
+          src="/images/3it.png" 
+          alt="Cóctel" 
+          className="w-10 h-10 object-contain"
+        />
       ),
     },
     {
@@ -32,9 +36,11 @@ export default function Timeline() {
       desc: "Comida rica y discursos breves (prometemos amenazar a los que hablen mucho).",
       // Icono: Copas de brindis
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693l-1.57-.393m15.6 0L12 21 4.2 15.3" />
-        </svg>
+        <img 
+          src="/images/2it.png" 
+          alt="Cena" 
+          className="w-10 h-10 object-contain"
+        />
       ),
     },
     {
@@ -43,9 +49,11 @@ export default function Timeline() {
       desc: "Aquí se rompen las reglas y empieza la verdadera diversión.",
       // Icono: Música / Baile
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.8 1.8 0 11-.996-3.46l1.948-.556V6.703a1.5 1.5 0 00-1.076-1.442L9 3.5m0 5.5v7.253a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.8 1.8 0 11-.996-3.46l1.948-.556V9" />
-        </svg>
+        <img 
+          src="/images/1it.png" 
+          alt="Baile" 
+         className="w-10 h-10 object-contain"
+        />
       ),
     },
     
@@ -86,13 +94,13 @@ export default function Timeline() {
           El Gran Delineado del Día
         </h2>
 
-        {/* LÍNEA DE TIEMPO VERTICAL ESTILO TIKTOK */}
-        <div className="relative max-w-lg mx-auto text-left pl-4 sm:pl-6">
+        {/* LÍNEA DE TIEMPO VERTICAL */}
+        <div className="relative max-w-lg mx-auto text-left pl-2 sm:pl-4">
           
-          {/* Línea vertical dorada de fondo */}
-          <div className="absolute left-[30px] sm:left-[38px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#C6A75E]/30 via-[#C6A75E]/60 to-[#C6A75E]/30" />
+          {/* Línea vertical dorada (centrada con respecto al nuevo nodo w-16) */}
+          <div className="absolute left-[38px] sm:left-[44px] top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#C6A75E]/30 via-[#C6A75E]/60 to-[#C6A75E]/30" />
 
-          <div className="space-y-8 relative">
+          <div className="space-y-10 relative">
             {eventos.map((item, index) => (
               <motion.div
                 key={index}
@@ -102,13 +110,13 @@ export default function Timeline() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex items-start gap-4 sm:gap-6 group"
               >
-                {/* NODO CIRCULAR CON ICONO */}
-                <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-[#F4F1ED] border-2 border-[#C6A75E] text-[#3B4D3C] flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-[#3B4D3C] group-hover:text-[#F4F1ED] transition-all duration-300">
+                {/* NODO CIRCULAR AMPLIADO (w-16 h-16) */}
+                <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-[#F4F1ED] border-2 border-[#C6A75E] text-[#3B4D3C] flex items-center justify-center p-2 shadow-md group-hover:scale-105 transition-all duration-300">
                   {item.icon}
                 </div>
 
                 {/* DETALLES DEL EVENTO */}
-                <div className="flex-1 pt-1">
+                <div className="flex-1 pt-1.5">
                   <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#C6A75E]/15 border border-[#C6A75E]/30 mb-1.5">
                     <span className="font-sans text-[11px] sm:text-xs font-semibold tracking-wider text-[#8C7A4B]">
                       {item.hora}

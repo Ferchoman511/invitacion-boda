@@ -49,6 +49,7 @@ export default function LocationSection() {
             <h3 className="font-serif text-xl sm:text-2xl text-[#2E2E2E] font-medium">
               Ceremonia Religiosa
             </h3>
+            <img src="images/igl.png" alt="iglesia"  className="w-[4cm] h-[4cm] object-contain mx-auto" />
             <p className="text-xs sm:text-sm font-serif text-[#5C5C5C]">
               Parroquia de San Felipe de Jesus
             </p>
@@ -77,6 +78,7 @@ export default function LocationSection() {
             <h3 className="font-serif text-xl sm:text-2xl text-[#2E2E2E] font-medium">
               Recepción y Fiesta
             </h3>
+            <img src="images/jard.png" alt="jardin" className="w-[4cm] h-[4cm] object-contain mx-auto" />
             <p className="text-xs sm:text-sm font-serif text-[#5C5C5C]">
               Jardín Villa Leona
             </p>
